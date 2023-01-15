@@ -44,12 +44,11 @@ body {
 }
 
 #tela_exibicao .resposta{
-        text-align: right;
-        color: rgba(150, 150, 150, 0.87);
-        height: 7px;
-        font-size: larger;
-        line-height: 3;
-        
+    text-align: right;
+    color: rgba(150, 150, 150, 0.87);
+    height: 7px;
+    font-size: larger;
+    line-height: 3;
 }
 
 .teclas {
@@ -62,7 +61,7 @@ body {
 .teclas button {
     outline: none;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: #474b6b;
     color: #fff;
     font-size: x-large;
