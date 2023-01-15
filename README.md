@@ -19,5 +19,9 @@ Projetos desenvolvidos com as seguintes tecnologias:
 - Git e Github
 
 ## 💻 Desafios
-
 - [Calculadora Simples](https://cibellemc.github.io/projetos-web/calculadora/)
+
+## 📝 Material de apoio
+- [Curso DevLinks - Rocketseat](https://lp.rocketseat.com.br/devlinks/inscricao)
+- [Playlist FrontEnd - Rogerio Silva](https://youtube.com/playlist?list=PLuhCJtW2i-wL_u0BqGHWFULMUl_l_ITI0)
+- [Símbolos no HTML](https://www.homehost.com.br/blog/tutoriais/caracteres-especiais-acentos-html/#:~:text=Existem%20diversas%20formas%20de%20incluir,os%20chevrons%20().)
