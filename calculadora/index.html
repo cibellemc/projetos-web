@@ -1,30 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>Minha calculadora</h1>
-    <p>Primeiro número</p>
-    <input type="text" id="primeiro_numero">
-    <p>Segundo número</p>
-    <input type="text" id="segundo_numero">
-    <br>
-    <br>
-    <button type="button" id="som" onclick="operacoes.js()">Soma</button>
-    <button type="button" id="sub" onclick="operacoes.js()">Subtrair</button>
-    <button type="button" id="mult" onclick="operacoes.js()">Multiplicar</button>
-    <button type="button" id="div" onclick="operacoes.js()">Dividir</button>
-
-    <p>Resultado:</p>
-    <input type="text" id="resultado">
+    <div class="container">
+        <div id="tela_exibicao">
+            <div class="numero_digitado"></div>
+            <div class="resposta"></div>
+        </div>
+        
+        <div class="teclas">
+            <button  class="operador" value="" id="limpar">C</button>
+            <button  class="operador" value="" id="apagar">&larr;</button>
+            <button  class="operador" value="/">/</button>
+            <button  class="operador" value="*">*</button>
+            <button  class="numero" value="7">7</button>
+            <button  class="numero" value="8">8</button>
+            <button  class="numero" value="9">9</button>
+            <button  class="operador" value="+">+</button>
+            <button  class="numero" value="4">4</button>
+            <button  class="numero" value="5">5</button>
+            <button  class="numero" value="6">6</button>
+            <button  class="operador" value="-">-</button>
+            <button  class="numero" value="1">1</button>
+            <button  class="numero" value="2">2</button> 
+            <button  class="numero" value="3">3</button>
+            <button  class="operador" id="igual" value="">=</button>
+            <button  class="numero" value="00">00</button>
+            <button  class="numero" value="0">0</button>
+            <button  class="numero" value=".">.</button>
+        </div>
+    </div>
     <script src="operacoes.js"></script>
-
+    
 </body>
 </html>
