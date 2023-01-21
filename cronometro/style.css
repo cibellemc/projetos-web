@@ -18,7 +18,7 @@ body {
 
 .container { /*caixa = visor + botoes*/
     height: 300px;
-    width: 450px;
+    width: 550px;
 
     border-radius: 3px;
 
@@ -29,7 +29,7 @@ body {
 /*a ausência dessa configuração fazia que as caixas de min e seg ficarem block, cada uma ocupando a largura do container*/
 .container .mostrador{ /*mostardor = caixa de (minutos + segundos)*/
     display: flex; 
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 30px;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 .botoes { /*caixa com tres botoes*/
-    margin: 30px;
+    margin: 0 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -96,3 +96,51 @@ body {
     background: #f43b3b;
 }
 
+/*quando a tela tiver até 600px - celular
+/*quando a tela tiver até 768 - tablet*/
+@media screen and (max-width:559px) {
+    .container{
+        width: 300px;
+        height: 200px;
+    }
+
+    .container .mostrador {
+        margin: 30px 0 0 0;
+        height: 100px;
+    }
+    
+    .mostrador div{
+        font-size: 40px;
+        width: 0px;
+    }
+
+    .mostrador span.tempo { /*parte do texto. vale p/ "minutos" e "segundos"*/
+        font-size: 6px;
+    }
+
+    .container .botoes {
+        margin: 5px 40px;
+    }
+    
+    .botoes button {
+        background: ;
+        font-size: 6px;
+        height: 30px;
+        width: 50px;
+    }
+
+    .botoes .initial-btn {
+        color: white; 
+        background: #538d22;
+    }
+    
+    .botoes .pause-btn{
+        color: white; 
+        background: #fdca40;
+    }
+    
+    .botoes .stop-btn {
+        color: white; 
+        background: #f43b3b;
+    }
+}
