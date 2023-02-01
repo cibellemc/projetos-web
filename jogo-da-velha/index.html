@@ -6,51 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da velha</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-
-    <div id="container">
-
-        <div id="placar">
-            <div>
-                <i class="fa-regular fa-x"></i>
-                <span>-</span>            
+    <div class="select-box">
+        <header>Jogo da Velha</header>
+        <div class="content">
+            <div class="title">Com qual quer jogar?</div>
+            <div class="option">
+                <button class="playerX">Jogador (X)</button>
+                <button class="playerO">Jogador (Y)</button>
             </div>
-
-            <div>
-                <i class="fa-regular fa-circle"></i>
-                <span>-</span>
-            </div>
-            
         </div>
-        
-        <div class="turno">Vez do X</div>
-        
-        <div id="jogo">
-            
-            <div>
-                <button></button>    
-                <button></button>        
-                <button></button>        
-            </div>
-            
-            <div>
-                <button></button>    
-                <button></button>        
-                <button></button>        
-            </div>
-            
-            <div>
-                <button></button>    
-                <button></button>        
-                <button></button>        
-            </div>   
-            
-        </div>
-        <button class="restart">Reiniciar</button>
-
     </div>
-    
+
+    <div class="player-box">
+        <div class="current-player">
+            <div class="player">
+                <span class="vez-X ativa">Vez do X</span>
+                <span class="vez-Y">Vez do Y</span>
+                <div class="span slider"></div>
+            </div>
+        </div>
+        <div class="game">
+            <button data-i="1">1</button>
+            <button data-i="2">2</button>
+            <button data-i="3"></button>
+            <button data-i="4"></button>
+            <button data-i="5"></button>
+            <button data-i="6"></button>
+            <button data-i="7"></button>
+            <button data-i="8"></button>
+            <button data-i="9"></button>
+        </div>
+    </div>
+
+    <div class="result-box">
+        <div class="won-text">Jogador <p>X</p> Ganhou</div>
+        <div class="btn">
+            <button>Replay</button>
+        </div>
+    </div>
+
 </body>
 </html>
