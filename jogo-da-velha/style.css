@@ -35,6 +35,12 @@ body {
     /*display: none;*/
 }
 
+.select-box.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50% scale(0.9));
+}
+
 .select-box header{
     font-size: 23px;
     font-weight: 600;
@@ -86,7 +92,8 @@ body {
     margin-bottom: 20px;
 }
 
-.player-box .current-player .player{
+
+.player-box .current-player .players{
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -94,6 +101,7 @@ body {
 }
 
 .player-box .current-player span {
+    color: #56baed;
     width: 100%;
     border-radius: 5px;
     padding: 7px 0;
@@ -103,6 +111,23 @@ body {
     text-align: center;
     position: relative;
     z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.current-player span:first-child{
+    color: #fff;
+}
+
+.player.active span:first-child{
+    color: #56baed;
+}
+
+.player.active span:nth-child(2){
+    color: #fff;
+}
+
+.player.active .slider {
+    left: 50%;
 }
 
 .current-player .slider {
@@ -116,7 +141,15 @@ body {
 }
 
 .player-box {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50% scale(1));
+}
+
+.player-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50% scale(0.9));
 }
 
 .game {
