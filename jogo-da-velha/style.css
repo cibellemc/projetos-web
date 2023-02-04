@@ -73,6 +73,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .option button:hover, .result-box .btn button:hover{
     transform: scale(0.9);
 }
@@ -91,7 +92,6 @@ body {
     border-radius: 5px;
     margin-bottom: 20px;
 }
-
 
 .player-box .current-player .players{
     display: flex;
@@ -138,6 +138,8 @@ body {
     width: 50%;
     position: absolute;
     border-radius: 5px;
+    z-index: 2;
+    transition: all 0.3s ease;
 }
 
 .player-box {
