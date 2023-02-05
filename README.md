@@ -21,6 +21,7 @@ Projetos desenvolvidos com as seguintes tecnologias:
 ## 💻 Desafios
 - [Calculadora Simples](https://cibellemc.github.io/projetos-web/calculadora/)
 - [Cronômetro](https://cibellemc.github.io/projetos-web/cronometro/)
+- [Jogo da velha](https://cibellemc.github.io/projetos-web/jogo-da-velha/)
 
 ## 📝 Material de apoio
 - [Curso DevLinks - Rocketseat](https://lp.rocketseat.com.br/devlinks/inscricao)
