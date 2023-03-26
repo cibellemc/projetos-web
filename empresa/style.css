@@ -33,7 +33,7 @@ header {
     padding: 0 10px;
 }
 
-.navbar a::after {
+.nav-links a::after {
     content: "";
     position: absolute;
     background-color: #ff3c78;
@@ -43,7 +43,7 @@ header {
     bottom: -10px;
 }
 
-.navbar a:hover::after {
+.nav-links a:hover::after {
     width: 100%;
 }
 
@@ -113,4 +113,3 @@ header {
         font-size: 1.2rem;
     }
 }
-
