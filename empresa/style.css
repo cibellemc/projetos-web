@@ -27,7 +27,34 @@ header {
 }
 
 .navbar a {
+    position: relative;
     color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 4px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+}
+
+.navbar a:hover::after {
+    width: 100%;
 }
 
 .navbar .logo {
@@ -41,11 +68,6 @@ header {
 
 .navbar .nav-links ul li {
     margin: 0 25px;
-}
-
-.navbar .nav-links ul li.active a{
-    color: #ed3c57;
-    font-weight: 600;
 }
 
 .navbar .menu-hamburguer {
