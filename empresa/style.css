@@ -38,16 +38,6 @@ header {
     position: absolute;
     background-color: #ff3c78;
     height: 4px;
-    width: 100%;
-    left: 0;
-    bottom: -10px;
-}
-
-.navbar a::after {
-    content: "";
-    position: absolute;
-    background-color: #ff3c78;
-    height: 4px;
     width: 0;
     left: 0;
     bottom: -10px;
