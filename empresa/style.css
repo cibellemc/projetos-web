@@ -25,75 +25,61 @@ body {
 }
 
 header {
-    height: 10vh;
-    width: 100vw;
-    background-size: cover;
+    position: fixed; /*problema*/
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+    background: var(--bg-color) ;
+}
+
+.logo {
+    color: #ff3c78;
+    font-size: 2.4rem;
+    font-weight: 600;
 }
 
 .navbar {
-    position: absolute;
-    padding: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .navbar a {
-    position: relative;
-    color: #ff3c78;
-    text-decoration: none;
-    padding: 0 10px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    padding: 10px 20px;
+    font-weight: 500;
 }
 
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    background-color: #ff3c78;
-    height: 4px;
-    width: 0;
-    left: 0;
-    bottom: -10px;
+.navbar a:hover {
+    color: var(--main-color );
+    transition: .4s;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.navbar .logo {
+#menu-icon {
     font-size: 2rem;
-    font-weight: bold;
+    cursor: pointer;
+    display: none;
 }
 
-.navbar .nav-links ul {
-    display: flex;
-}
-
-.navbar .nav-links ul li {
-    margin: 0 25px;
-}
-
-.navbar .menu-hamburguer {
-    display: none; /*não aparece em tela grande*/
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    width: 35px;
-}
-
-section {
+section,footer {
     padding: 70px 17%;
 }
 
 .home {
+    margin-top: 20px;
+    width: 100%;
+    min-height: 90vh; /*problema*/
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     align-items: center;
 }
 
-.home-img img {
+.container-slider .container-images img {
     max-width: 100%;    
     width: 600px;
     height: auto;
@@ -124,7 +110,7 @@ section {
 
 .sobre {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+    grid-template-columns: repeat(2, 2fr);
     grid-gap: 1.5rem;
     align-items: center;
 }
@@ -179,7 +165,7 @@ section {
     align-items: center;
     justify-content: center;
     background: #feeee7;
-    padding: 20%;
+    padding: 20px;
     border-radius: 0.5rem;
 }
 
@@ -265,9 +251,6 @@ section {
 
 .main {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -276,12 +259,11 @@ section {
 }
 
 .col {
-    width: 50%;
+    width: 25%;
 }
 
 .col h4{
     font-size: 1.2rem;
-    color: var(--text-color);
     margin-bottom: 25px;
     position: relative;
 }
@@ -293,51 +275,23 @@ section {
     width: 50px;
     left: 0;
     bottom: -8px;
-    background: var(--text-color);
+    background: var(--main-color);
 }
 
-@media screen and (max-width: 900px){
-    .navbar {
-        padding: 0; /*ocupa toda horizontal*/
-    }
-
-    .navbar .logo { /*manter a posição mesmo no blur*/
-        position: absolute;
-        top: 15px;
-        left: 30px;
-    }
-
-    .navbar .menu-hamburguer {
-        display: block;
-    }
-
-    .nav-links {
-        top: 0;
-        left: 0;
-        position: absolute;
-        background-color:rgba(255, 255, 255, 0.299);
-        backdrop-filter: blur(3px);
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: -100%; /*oculto até o click*/
-        transition: all .5s ease;
-    }
-
-    .nav-links.mobile-menu {
-        margin-left: 0;
-    }
-
-    .nav-links ul {
-        display: flex;
-        flex-direction: column; /*navbar se torna coluna*/
-        align-items: center;
-    }
-
-    .navbar .nav-links ul li {
-        margin: 25px 0;
-        font-size: 1.2rem;
-    }
+.col ul li:not(:last-child){
+    margin-bottom: 15px;
 }
+
+.col ul li a {
+    color: #9897a9;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: capitalize;
+    transition: .4s;
+}
+
+.col ul li a:hover {
+    color: #1e1c2a; 
+    transform: translateX(-10px);
+}
+
