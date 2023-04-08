@@ -34,6 +34,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 30px 170px;
+    background-color: #2b2640;
 }
 
 .logo {
@@ -79,10 +80,6 @@ section,footer {
 
 .container-slider {
     max-width: 100%;  
-}
-
-.home-text {
-    height: 50%;
 }
 
 .home-text h1 {
