@@ -34,7 +34,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 30px 170px;
-    background: var(--bg-color) ;
 }
 
 .logo {
@@ -70,18 +69,20 @@ section,footer {
 }
 
 .home {
-    margin-top: 20px;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);;
     gap: 1.5rem;
     align-items: center;
 }
 
-.container-slider .container-images img {
-    max-width: 80%;    
-    height: auto;
+.container-slider {
+    max-width: 100%;  
+}
+
+.home-text {
+    height: 50%;
 }
 
 .home-text h1 {
@@ -107,47 +108,47 @@ section,footer {
     transition: .4s;
 }
 
-.sobre {
+.time {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 1.5rem;
     align-items: center;
 }
 
-.sobre-img img {
+.time-img img {
     max-width: 100%;
     width: 480px;
     height: auto;
 }
 
-.sobre-texto span {
+.time-texto span {
     color: var(--main-color);
     font-weight: 600;
 }
 
-.sobre-texto h2 {
+.time-texto h2 {
     font-size: var(--h2-font);
 }
 
-.sobre-texto p {
+.time-texto p {
     margin: 0.8rem 0 1.8rem;
     line-height: 1.7;
 }
 
-.linhas {
+.cabecalho {
     text-align: center;
 }
 
-.linhas span {
+.cabecalho span {
     color: var(--main-color);
     font-weight: 600;
 }
 
-.linhas h2 {
+.cabecalho h2 {
     font-size: var(--h2-font);
 }
 
-.menu-container {
+.sobre-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     grid-gap: 1.5rem;
@@ -300,8 +301,9 @@ section,footer {
     }
 
     :root {
-        --big-font: 3.5rem;
-        --h2-font: 2rem;
+        --big-font: 3rem;
+        --h2-font: 1.5rem;
+        --p-font:0.5rem;
     }
 }
 
@@ -347,12 +349,20 @@ section,footer {
         padding: 10px 16px;
     }
 
-    .home, .sobre {
+    .home, .time {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .sobre-img {
+    img.slider {
+        max-height: 40vh;
+    }
+
+    .home-text {
+        max-height: 50%;
+    }
+
+    .time-img {
         order: 2;
     }
 
