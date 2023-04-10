@@ -82,12 +82,12 @@ section,footer {
     max-width: 100%;  
 }
 
-.home-text, .layout-text h1 {
+.home-text h1, .layout-text h1 {
     font-size: var(--big-font);
     color: var(--main-color);
 }
 
-.home-text, .layout-text h2 {
+.home-text h2, .layout-text h2 {
     font-size: var(--h2-font);
     margin: 1rem 0 2rem; 
 }
