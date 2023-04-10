@@ -113,8 +113,7 @@ section,footer {
 }
 
 .time-img img {
-    max-width: 100%;
-    width: 480px;
+    width: 660px;
     height: auto;
 }
 
@@ -167,12 +166,11 @@ section,footer {
 }
 
 .box-img {
-    width: 400px;
     margin-bottom: 1rem;
 }
 
 .box-img img {
-    width: 100%;
+    width: 660px;
     height: 100%;
 }
 
