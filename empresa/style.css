@@ -82,6 +82,10 @@ section,footer {
     max-width: 100%;  
 }
 
+.container-slider1 {
+    max-width: 100%;  
+}
+
 .home-text h1, .layout-text h1 {
     font-size: var(--big-font);
     color: var(--main-color);
@@ -113,7 +117,7 @@ section,footer {
 }
 
 .time-img img {
-    width: 660px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -166,11 +170,13 @@ section,footer {
 }
 
 .box-img {
+    width: 600px;
+    max-width: 100%;
     margin-bottom: 1rem;
 }
 
 .box-img img {
-    width: 660px;
+    max-width: 100%;
     height: 100%;
 }
 
@@ -343,7 +349,7 @@ section,footer {
         padding: 10px 16px;
     }
 
-    .home, .time {
+    .home, .time, .layout{
         grid-template-columns: 1fr;
         text-align: center;
     }
