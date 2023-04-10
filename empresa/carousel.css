@@ -11,6 +11,8 @@
   align-items: center;
   justify-content: center;
   gap: .5rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .container-images, .container-images1 {
