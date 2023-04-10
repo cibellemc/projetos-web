@@ -69,7 +69,7 @@ section,footer {
     padding: 70px 17%;
 }
 
-.home {
+.home, .layout {
     width: 100%;
     min-height: 90vh;
     display: grid;
@@ -82,12 +82,12 @@ section,footer {
     max-width: 100%;  
 }
 
-.home-text h1 {
+.home-text, .layout-text h1 {
     font-size: var(--big-font);
     color: var(--main-color);
 }
 
-.home-text h2 {
+.home-text, .layout-text h2 {
     font-size: var(--h2-font);
     margin: 1rem 0 2rem; 
 }
