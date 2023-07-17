@@ -5,7 +5,11 @@ import bodyParser from 'body-parser';
 import { Post } from "./models/Post.js";
 
 // config - quero usar o handlebars como template engine
-app.engine('handlebars', handlebars.engine({defaultLayout: 'main'})) // main é o template padrão da aplicação
+app.engine('handlebars',handlebars.engine({defautLayout: 'main',
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+}}))
 app.set('view engine', 'handlebars')
 
 // config - body parser
@@ -14,9 +18,11 @@ app.use(bodyParser.json())
 
 // rotas
 
-app.get('/', function(req, res){
-  res.render('home')
-})
+app.get('/', (req, res) => {
+  Post.findAll({order: [['id', 'DESC']]}).then(posts => {
+    res.render('home', { posts });
+  });
+});
 
 app.get('/cad', function(req, res){
   res.render('formulario.handlebars')
