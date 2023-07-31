@@ -5,12 +5,12 @@ import Display from "./Display";
 export default function Contador(){
     const [numero, setNumero] = useState<number>(0)
 
-    function incrementar(){
-        setNumero(numero + 1)
+    function incrementar(valor: number){
+        setNumero(numero + valor)
     }
 
-    function decrementar(){
-        setNumero(numero -1)
+    function decrementar(valor: number){
+        setNumero(numero - valor)
     }
 
     return (
