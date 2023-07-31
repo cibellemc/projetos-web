@@ -1,0 +1,72 @@
+* Tudo que colocar na pages vira uma url na aplicação
+Ex: arquivo ghi.tsx dentro de pasta def dentro de pasta abc pode ser acessado com url "localhost:3000/abc/cde/ghi
+
+* Dentro de pages só arquivos de páginas completas. Para parte de páginas, cria-se pasta "components" dentro de src/
+
+* Comunicação direta de pai pra filho (dependência de cima para baixo)
+
+* Pode usar className="" e escrever em uma só linha ou usar className={``} para múltiplas linhas
+
+* Extensão Tailwind CSS Intellisense
+
+* Se quiser um tamanho específico, pode usar []. Ex:
+        <div className={`
+            bg-purple-500 p-2 rounded-md
+            w-64 h-[300px]
+        `}>
+            Caixa
+        </div>
+
+* flex flex-row: eixo priincipal é o da linha,
+  flex flex-col: coluna
+
+* o par de chaves acessa e executa javascript
+
+* {props.children} capta o que foi colocado entre a div. Ex:
+            <Caixa>name="Cibelle"</Caixa>
+
+* h-screen centraliza na tela
+
+* font-black e text-black são duas coisas diferentes. O primeiro se refere ao peso da fonte e o segundo, à cor da fonte
+
+* definir o tipo dos parâmetros a partir de uma interface
+
+* escopo interno de cada componente, pode haver comunicação mas o forte é dividir para conquistar
+
+-- Aula 02
+
+* arquivo next.config.js tem como funções: configuração de ambiente, rotas, servidor, imagens executa
+
+* images: { domains: ['source.unsplash.com'] }: está definindo os domínios dos quais as imagens serão carregadas. O Next.js pode carregar imagens de source.unsplash.com sem a necessidade de serem otimizadas ou passar por um servidor interno.
+
+* caso 01 - invoca no exato momento
+    return (
+        <div>
+           {renderizarBotao()}
+        </div>
+    )
+
+* caso 02 - só invoca a função no momento do clique
+
+    return (
+        <button onClick={incrementar}>
+            Evento
+        </button>
+    )
+
+* fluxo unidirecional: alterar estado para que a view seja alterada (nova renderização)
+
+* identificador e valor. Ex: 
+const pesquisa = "google"
+
+* os "interesses" com uma variável são ler e usar valor ou escrever valor
+
+* useState(): alterações monitoradas. O React pode reagir
+
+* comunicação direta: passar propriedades de um componente pra outro via props
+
+* comunicação indireta: passar um função por props do componente pai pro filho, que em algum momento, a partir de um clique ou alteração no input chama a função e passa um valor de volta
+
+* possível criar css externo na pasta style e importar no global
+
+* flex-1 no tailwind diz para ocupar todo o espaço possível (como o border-box width: 100%)
