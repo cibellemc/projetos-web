@@ -1,17 +1,16 @@
 $(document).ready(function () {
-    $("[data-fancybox='gallery']").fancybox({
+    var numberOfLinks = $("a.miniatura-camera").length;
+
+    // Calcula o width com base no número de elementos
+    var colWidth = 100 / numberOfLinks*2 + "%";
+
+    // Define o width das col-4
+    $(".col-4").css("width", colWidth);
+
+    $(".miniatura-camera").fancybox({
         buttons: [
-            "slideShow",
             "fullScreen",
-            "thumbs",
             "close"
-        ],
-        thumbs: {
-            autoStart: true,
-            axis: "y"
-        },
-        onInit: function (instance) {
-            instance.$refs.toolbar.find('[data-fancybox-play]').hide();
-        }
+        ]
     });
 });
