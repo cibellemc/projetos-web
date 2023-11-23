@@ -9,12 +9,19 @@ function App() {
   const horaRetorno = moment(horaInicio, 'HH:mm').add(moment(intervalo, 'HH:mm').hours(), 'hours').add(moment(intervalo, 'HH:mm').minutes(), 'minutes').format('HH:mm');
 
   function handleOnChange(event: { target: { value: any; }; }) {
-    setHoraInicio(event.target.value);
+    const inputValue = event.target.value;
+
+    if (inputValue !== undefined && inputValue.trim() !== '' && /^([01]\d|2[0-3]):([0-5]\d)$/.test(inputValue)) {
+      setHoraInicio(inputValue);
+    }
   }
 
-
   function handleChangeIntervalo(event: { target: { value: any; }; }) {
-    setIntervalo(event.target.value);
+    const inputValue = event.target.value;
+
+    if (inputValue !== undefined && inputValue.trim() !== '' && /^([01]\d|2[0-3]):([0-5]\d)$/.test(inputValue)) {
+      setIntervalo(inputValue);
+    }
   }
 
   return (
