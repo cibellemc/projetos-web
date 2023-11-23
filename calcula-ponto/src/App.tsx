@@ -7,6 +7,7 @@ function App() {
   const [intervalo, setIntervalo] = useState("01:15:00")
 
   const horaRetorno = moment(horaInicio, 'HH:mm').add(moment(intervalo, 'HH:mm').hours(), 'hours').add(moment(intervalo, 'HH:mm').minutes(), 'minutes').format('HH:mm');
+  const tempoRestante = moment(horaRetorno, 'HH:mm').subtract(moment().format('HH:mm')).subtract(moment(horaInicio).format('HH:mm')).format('HH:mm');
 
   function handleOnChange(event: { target: { value: any; }; }) {
     const inputValue = event.target.value;
@@ -35,6 +36,7 @@ function App() {
         <input type="time" onChange={handleChangeIntervalo} value={intervalo} id="" />
       </div>
       <h2>Volta às {horaRetorno}</h2>
+      <h2>Tempo restante: {tempoRestante}</h2>
 
     </div>
   )
