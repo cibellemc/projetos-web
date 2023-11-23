@@ -36,7 +36,7 @@ function App() {
         <input type="time" onChange={handleChangeIntervalo} value={intervalo} id="" />
       </div>
       <h2>Volta às {horaRetorno}</h2>
-      <h2>Tempo restante: {tempoRestante}</h2>
+      {/* <h2>Tempo restante: {tempoRestante}</h2> */}
 
     </div>
   )
