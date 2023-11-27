@@ -9,10 +9,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,33 +17,53 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url('./public/Imagem1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.container {
-  color: #242424;
-  background-color: white;
+.anonima {
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-area: header;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+header img {
+  width: 100px;
+}
+
+.formulario-ponto {
+  background-color: #ffffff;
+  border: 1px solid rgb(199, 199, 199);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 2rem;
   max-width: 450px;
-  justify-content: center;
   align-items: center;
 }
 
@@ -63,14 +80,11 @@ input[type="time"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* Estilizando o h2 */
 h2 {
-  font-size: 20px; /* Ajuste o tamanho da fonte */
-  color: #333; /* Escolha uma cor de texto adequada */
-  margin-bottom: 15px; /* Adicione algum espaçamento inferior */
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
-/* Estilizando o h2 dentro do input time */
-h2 + input[type="time"] {
-  margin-top: -10px; /* Ajuste o espaçamento entre o h2 e o input time */
+h2+input[type="time"] {
+  margin-top: -10px;
 }
